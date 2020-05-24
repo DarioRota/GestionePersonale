@@ -25,7 +25,7 @@ namespace functions
             int dipendentiletti = default(int);
             StreamReader miofile;
             miofile = new StreamReader(nomefile);
-            while (miofile.EndOfStream == false) ;
+            while (miofile.EndOfStream == false) 
             {
                 nuovodipendente.nome = miofile.ReadLine();
                 nuovodipendente.cognome = miofile.ReadLine();
@@ -137,6 +137,16 @@ namespace functions
                 miofile.WriteLine(eledip[x].settore);
             }
             miofile.Close();
+        }
+        public static void FiltraLista(ListView lista, int i, dipendete[] eledip)
+        {
+            lista.Items.Clear();
+            
+                var row = new string[] { eledip[i].nome,eledip[i].cognome,eledip[i].codicefiscale,eledip[i].email,
+                eledip[i].indirizzo,eledip[i].settore};
+                var listrow = new ListViewItem(row);
+                lista.Items.Add(listrow);
+            
         }
     }
 }
