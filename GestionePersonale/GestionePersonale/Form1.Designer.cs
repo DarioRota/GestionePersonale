@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -59,10 +61,12 @@
             this.Settore = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.visualizzaDipendenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -223,6 +227,16 @@
             this.tabPage2.Text = "Assegna Settore / Rimuovi Personale";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(582, 263);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(180, 35);
+            this.button5.TabIndex = 21;
+            this.button5.Text = "Rimuovi persona selezionata";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(582, 199);
@@ -284,6 +298,7 @@
             this.Email,
             this.Indirizzo,
             this.Settore});
+            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(6, 6);
@@ -343,15 +358,19 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button5
+            // contextMenuStrip1
             // 
-            this.button5.Location = new System.Drawing.Point(582, 263);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(180, 35);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "Rimuovi persona selezionata";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visualizzaDipendenteToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(188, 48);
+            // 
+            // visualizzaDipendenteToolStripMenuItem
+            // 
+            this.visualizzaDipendenteToolStripMenuItem.Name = "visualizzaDipendenteToolStripMenuItem";
+            this.visualizzaDipendenteToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.visualizzaDipendenteToolStripMenuItem.Text = "Visualizza dipendente";
+            this.visualizzaDipendenteToolStripMenuItem.Click += new System.EventHandler(this.visualizzaDipendenteToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -371,6 +390,7 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,6 +430,8 @@
         private System.Windows.Forms.ColumnHeader Settore;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem visualizzaDipendenteToolStripMenuItem;
     }
 }
 

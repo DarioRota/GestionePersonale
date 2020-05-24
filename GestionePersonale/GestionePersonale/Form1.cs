@@ -128,5 +128,18 @@ namespace GestionePersonale
             textBox8.Text = "";
 
         }
+
+        private void visualizzaDipendenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form img = new Form();
+            img.Size = new Size(100, 100);
+            img.StartPosition = FormStartPosition.CenterScreen;
+            PictureBox pb = new PictureBox();
+            pb.Size = new Size(100, 100);
+            string dipendente = ($"{listView1.SelectedItems[0].SubItems[0].Text}{listView1.SelectedItems[0].SubItems[1].Text}");
+            pb.Load(dipendente);
+            img.Controls.Add(pb);
+            this.Controls.Add(img);
+        }
     }
 }
