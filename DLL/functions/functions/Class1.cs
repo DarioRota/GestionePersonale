@@ -16,9 +16,6 @@ namespace functions
         public string email;
         public string indirizzo;
         public string settore;
-        public decimal distanza;
-        public int livello;
-
     }
     public class Functions
     {
@@ -36,9 +33,6 @@ namespace functions
                 nuovodipendente.email = miofile.ReadLine();
                 nuovodipendente.indirizzo = miofile.ReadLine();
                 nuovodipendente.settore = miofile.ReadLine();
-                nuovodipendente.livello = int.Parse(miofile.ReadLine());
-                nuovodipendente.distanza = decimal.Parse(miofile.ReadLine());
-
                 eledip[num] = nuovodipendente;
                 num++;
                 dipendentiletti++;
@@ -54,7 +48,7 @@ namespace functions
             while (x < num)
             {
                 var row = new string[] { eledip[x].nome,eledip[x].cognome,eledip[x].codicefiscale,eledip[x].email,
-                eledip[x].indirizzo,eledip[x].settore,eledip[x].livello.ToString(), eledip[x].distanza.ToString()};
+                eledip[x].indirizzo,eledip[x].settore};
                 var listrow = new ListViewItem(row);
                 lista.Items.Add(listrow);
                 x++;
@@ -78,7 +72,6 @@ namespace functions
         public static int cerca(dipendete[] eledip, string codice, int num)
         {
             int indice = default(int);
-            indice = -1;
             for (int x = 0; x < num; x++)
             {
                 if (string.Compare(eledip[x].codicefiscale, codice) == 0)
@@ -142,18 +135,15 @@ namespace functions
                 miofile.WriteLine(eledip[x].email);
                 miofile.WriteLine(eledip[x].indirizzo);
                 miofile.WriteLine(eledip[x].settore);
-                miofile.WriteLine(eledip[x].livello);
-                miofile.WriteLine(eledip[x].distanza);
-
             }
             miofile.Close();
         }
         public static void FiltraLista(ListView lista, int i, dipendete[] eledip)
         {
             lista.Items.Clear();
-
-            var row = new string[] { eledip[i].nome,eledip[i].cognome,eledip[i].codicefiscale,eledip[i].email,
-                eledip[i].indirizzo,eledip[i].settore, eledip[i].livello.ToString(), eledip[i].distanza.ToString() };
+            
+                var row = new string[] { eledip[i].nome,eledip[i].cognome,eledip[i].codicefiscale,eledip[i].email,
+                eledip[i].indirizzo,eledip[i].settore};
                 var listrow = new ListViewItem(row);
                 lista.Items.Add(listrow);
             
