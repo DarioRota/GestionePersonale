@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btn_inserisci = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_inserisci = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -117,7 +117,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.btn_inserisci);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.textBox12);
@@ -142,6 +141,13 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Inserimento Personale";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(193, 73);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(772, 30);
+            this.panel2.TabIndex = 7;
             // 
             // btn_inserisci
             // 
@@ -168,13 +174,6 @@
             this.btn_inserisci.TabIndex = 17;
             this.btn_inserisci.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_inserisci.Click += new System.EventHandler(this.bunifuThinButton21_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(0, 35);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(772, 30);
-            this.panel2.TabIndex = 7;
             // 
             // label13
             // 
@@ -868,6 +867,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1002, 494);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuFlatButton3);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuFlatButton1);
